@@ -1,0 +1,33 @@
+.allergies {
+  position: relative;
+  left: 297px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 8em;
+  width: 8em;
+  background-color: rgb(255, 255, 255);
+  border: solid 6px black;
+  border-radius: 10em;
+
+  transform: scale(0.7);
+  cursor: pointer;
+}
+.allergies-modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  margin: auto;
+  width: fit-content;
+  font-family: "Avenir BH";
+  text-align: center;
+  transition: all ease 0.3s;
+}
+.allergies-details {
+  position: relative;
+  left: 470px;
+  padding: 4px;
+}

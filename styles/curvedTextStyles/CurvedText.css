@@ -1,0 +1,81 @@
+.activeProblems-curved-text-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  animation: fade-In 2s ease 1 backwards;
+}
+.activeProblems-curved-text {
+  position: relative;
+  top: -210px;
+
+  width: fit-content;
+  font-size: 1.3em;
+}
+
+.pastProblems-curved-text-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  animation: fade-In 2s ease 1 backwards;
+}
+.pastProblems-curved-text {
+  position: relative;
+  bottom: -215px;
+
+  font-family: "Avenir Heavy";
+  font-weight: 600;
+  font-size: 1.3em;
+}
+.medications-curved-text-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  animation: fade-In 2s ease 1 backwards;
+}
+.medications-curved-text {
+  position: relative;
+  top: 70px;
+  left: 250px;
+
+  font-family: "Avenir Heavy";
+  font-weight: 600;
+  font-size: 1.3em;
+  text-shadow: 0 0 100px white;
+}
+
+.allergies-curved-text-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  animation: fade-In 2s ease 1 backwards;
+}
+.allergies-curved-text {
+  position: relative;
+  top: 53px;
+  left: 370px;
+
+  font-family: "Avenir Heavy";
+  font-weight: 600;
+  font-size: 0.8em;
+}
+
+@keyframes fade-In {
+  0% {
+    color: transparent;
+    opacity: 0;
+    visibility: hidden;
+  }
+  50% {
+    color: transparent;
+    opacity: 0.1;
+  }
+  100% {
+    color: black;
+    opacity: 1;
+    visibility: visible;
+  }
+}

@@ -1,0 +1,62 @@
+.activeProblems-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 100;
+}
+.activeProblems {
+  position: relative;
+  top: -150px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  height: 8em;
+  width: 8em;
+  background-color: white;
+  border: solid 5px black;
+  border-radius: 10em;
+  cursor: pointer;
+  z-index: 100;
+}
+.activeProblems h4 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: black;
+  color: white;
+  border-radius: 100em;
+
+  z-index: 3;
+}
+.activeProblems-modal {
+  display: flex;
+  flex-direction: column;
+  min-width: 355px;
+  max-width: 355px;
+
+  font-family: "Avenir BH";
+  transition: all ease 0.3s;
+}
+.activeProblems-details {
+  display: flex;
+  justify-content: space-around;
+}
+.activeProblems-details p {
+  /* min-width: 10vw; */
+  display: flex;
+  align-items: center;
+}
+.activeProblems-details img {
+  height: 25px;
+  width: 25px;
+}
+.activeProblems-details p:first-child {
+  justify-content: center;
+  min-width: 165px;
+}
+.activeProblems-details p:last-child {
+  margin-right: auto;
+}

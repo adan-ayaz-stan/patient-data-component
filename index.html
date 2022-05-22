@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Patient Details</title>
+    <!-- <title>{patient.name} Details</title> -->
+
+    <link rel="stylesheet" href="./styles/main.css" />
+    <link rel="stylesheet" href="./styles/activeProblems.css" />
+    <link rel="stylesheet" href="./styles/curvedTextStyles/CurvedText.css">
+    <link rel="stylesheet" href="./styles/pastProblems.css" />
+    <link rel="stylesheet" href="./styles/medications.css" />
+    <link rel="stylesheet" href="./styles/medicationsPastProblems.css" />
+    <link rel="stylesheet" href="./styles/allergies.css" />
+    <link rel="stylesheet" href="./styles/profile.css" />
+    <link rel="stylesheet" href="./styles/universal-array-sizing-css.css" />
+  </head>
+  <body>
+    <main class="main">
+      <div class="viewChanger destroyed" id="viewChanger">
+        <p class="viewActive" id="viewer-overview">Overview</p>
+        <p id="viewer-unabriged">Unabriged</p>
+      </div>
+
+      <a href="/" class="close-icon close-icon-hidden" id="close-icon">❌</a>
+
+      <hr class="middleLine" />
+      
+      <div class="rightMidLine">
+        <hr />
+      </div>
+      <div class="rightLine">
+        <hr />
+      </div>
+
+      
+      <div class="minimizer" id="minimizer">
+        <p>+</p>
+      </div>
+
+      <!-- Patient Name To be Inserted Here -->
+      <div class="profileNameBox profileNameBoxMinimized" id="profileNameBox">
+        <h4>SURNAME, Name</h4>
+        <p>000 Address Line 01, City/Town P05T C0DE</p>
+      </div>
+
+      <div class="activeProblemsAndMedicationsModal">
+        <div
+          class="activeProblems-modal no-hover destroyed"
+          id="activeProblems-modal"
+        >
+          <!-- Array of active problems will be rendered with the following order -->
+          <!-- <div class="activeProblems-details">
+            <p>{Date/Month/Year}</p>
+            <p>
+              <img
+                src={IconSourcePathDependingOnDataFromBackend}
+                alt="icon"
+              />
+              {Active problem name}
+            </p>
+          </div> -->
+          <div class="activeProblems-details">
+            <p>DD/MM/YYYY</p>
+            <p>
+              <img
+                src="./cms/SVG FINAL/Points SVG/non-hover-icon-acute.svg"
+                alt="icon"
+              />
+              Active Problem 01
+            </p>
+          </div>
+          <div class="activeProblems-details">
+            <p>DD/MM/YYYY</p>
+            <p>
+              <img
+                src="./cms/SVG FINAL/Points SVG/non-hover-icon-significant.svg"
+                alt="icon"
+              />
+              Active Problem 02
+            </p>
+          </div>
+          <div class="activeProblems-details">
+            <p>DD/MM/YYYY</p>
+            <p>
+              <img
+                src="./cms/SVG FINAL/Points SVG/non-hover-icon-significant.svg"
+                alt="icon"
+              />
+              Active Problem 03
+            </p>
+          </div>
+          <div class="activeProblems-details">
+            <p>DD/MM/YYYY</p>
+            <p>
+              <img
+                src="./cms/SVG FINAL/Points SVG/non-hover-icon-significant.svg"
+                alt="icon"
+              />
+              Active Problem 04
+            </p>
+          </div>
+          <div class="activeProblems-details">
+            <p>DD/MM/YYYY</p>
+            <p>
+              <img
+                src="./cms/SVG FINAL/Points SVG/non-hover-icon-significant.svg"
+                alt="icon"
+              />
+              Active Problem 05
+            </p>
+          </div>
+          <div class="activeProblems-details">
+            <p>DD/MM/YYYY</p>
+            <p>
+              <img
+                src="./cms/SVG FINAL/Points SVG/non-hover-icon-significant.svg"
+                alt="icon"
+              />
+              Active Problem 06
+            </p>
+          </div>
+          <div class="activeProblems-details">
+            <p>DD/MM/YYYY</p>
+            <p>
+              <img
+                src="./cms/SVG FINAL/Points SVG/non-hover-icon-significant.svg"
+                alt="icon"
+              />
+              Active Problem 07
+            </p>
+          </div>
+          <div class="activeProblems-details">
+            <p>DD/MM/YYYY</p>
+            <p>
+              <img
+                src="./cms/SVG FINAL/Points SVG/non-hover-icon-acute.svg"
+                alt="icon"
+              />
+              Active Problem 08
+            </p>
+          </div>
+        </div>
+        <div
+          class="medications-modal no-hover destroyed"
+          id="medications-modal"
+        >
+          <!-- Rendering is similar to that of active Problems -->
+          <div class="medications-details">
+            <p>
+              <img
+                src="./cms/SVG FINAL/Points SVG/red-icon-repeat.svg"
+                alt="icon"
+              />
+              Medication 01
+            </p>
+          </div>
+          <div class="medications-details">
+            <p>
+              <img
+                src="./cms/SVG FINAL/Points SVG/red-icon-repeat.svg"
+                alt="icon"
+              />
+              Medication 02
+            </p>
+          </div>
+          <div class="medications-details">
+            <p>
+              <img
+                src="./cms/SVG FINAL/Points SVG/red-icon-repeat.svg"
+                alt="icon"
+              />
+              Medication 03
+            </p>
+          </div>
+          <div class="medications-details">
+            <p>
+              <img
+                src="./cms/SVG FINAL/Points SVG/red-icon-repeat.svg"
+                alt="icon"
+              />
+              Medication 04
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="interfaceContainer">
+        <div class="backgroundConnectors"></div>
+        
+        <div class="activeProblems-curved-text-container">
+          <div
+            class="activeProblems-curved-text"
+            id="activeProblems-curved-text"
+          > 
+            <h2>
+              ACTIVE PROBLEMS
+            </h2>
+          </div>
+        </div>
+        <div class="pastProblems-curved-text-container">
+          <div
+            class="pastProblems-curved-text"
+            id="pastProblems-curved-text"
+            name="CircleType"
+          >
+          <h2>
+            PAST PROBLEMS
+          </h2>
+          </div>
+        </div>
+        <div class="medications-curved-text-container">
+          <div
+          class="medications-curved-text"
+          id="medications-curved-text"
+          name="CircleType"
+        >
+          <h2>
+            MEDICATION
+          </h2>
+        </div>
+        </div>
+        
+        <div class="allergies-curved-text-container">
+          <div
+              class="allergies-curved-text"
+              id="allergies-curved-text"
+              name="CircleType"
+            >
+            <h2>
+              ALLERGIES
+            </h2>
+            </div>
+        </div>
+
+        <!-- MODAL EMBEDDED INTO THE INTERFACE -->
+        <div class="allergies-modal no-hover destroyed" id="allergies-modal">
+          <div class="allergies-details">
+            <p>• Allergy 01</p>
+          </div>
+          <div class="allergies-details">
+            <p>• Allergy 02</p>
+          </div>
+        </div>
+        
+        <!-- MODAL FINISH -->
+        <div class="profileSuperContainer">
+          <div class="profileContainer">
+            <!-- Patient Name with the source of its image -->
+            <div class="profileImage">
+              <img
+                src="./cms/placeholder-profile.png"
+                alt="profile-placeholder"
+              />
+              <h3>Patient Name</h3>
+            </div>
+            <!-- Icons of profile to be inserted down below -->
+            <img src="./cms/SVG FINAL/Gender Circle SVG/GenderCircle-02 Male.svg" class="profile-gender-type">
+          </img>
+
+
+  <!-- First Icon Of Hoverable State -->
+            <img
+              src="./cms/SVG FINAL/Icons 08 to 15 NON HOVER SVG/Icons NonHover-08a.svg"
+              alt="icon-8a"
+              class="first-icon-profile"
+            />
+            <div class="icon-hover-modal icon-hover-modal-first-icon">
+              <h5>HOUSING SITUATION</h5>
+              <h4>
+                <img src="./cms/SVG FINAL/Icons 08 to 15 NON HOVER SVG/Icons NonHover-08a.svg" alt="icon-hovered-box"></img>
+                RENTING</h4>
+              <p>HouseHold Income $0 - $10k</p>
+            </div>
+  
+            <!-- Second Icon Of Hoverable State -->
+            <img
+              src="./cms/SVG FINAL/Icons 08 to 15 NON HOVER SVG/Icons NonHover-09a.svg"
+              alt="icon-9a"
+              class="second-icon-profile"
+            />
+            <div class="icon-hover-modal icon-hover-modal-second-icon">
+              <h5>Ethinicity</h5>
+              <h4>
+                <img src="./cms/SVG FINAL/Icons 08 to 15 NON HOVER SVG/Icons NonHover-09a.svg" alt="icon-hovered-box"></img>
+                ASIAN</h4>
+              <p>British Indian</p>
+            </div>
+            <!-- Third Icon Hoverable State -->
+            <img
+              src="./cms/SVG FINAL/Icons 08 to 15 NON HOVER SVG/Icons NonHover-10a.svg"
+              alt="icon-10a"
+              class="third-icon-profile"
+            />
+            <div class="icon-hover-modal icon-hover-modal-third-icon">
+              <h5>Sub Heading</h5>
+              <h4>
+                <img src="./cms/SVG FINAL/Icons 08 to 15 NON HOVER SVG/Icons NonHover-10a.svg" alt="icon-hovered-box"></img>
+                HEADING</h4>
+              <p>SubDetail</p>
+            </div>
+  
+            <!-- Fourth -->
+            <img
+              src="./cms/SVG FINAL/Icons 08 to 15 NON HOVER SVG/Icons NonHover-11a.svg"
+              alt="icon-11a"
+              class="fourth-icon-profile"
+            />
+            <div class="icon-hover-modal icon-hover-modal-fourth-icon">
+              <h5>Sub Heading</h5>
+              <h4>
+                <img src="./cms/SVG FINAL/Icons 08 to 15 NON HOVER SVG/Icons NonHover-10a.svg" alt="icon-hovered-box"></img>
+                HEADING</h4>
+              <p>SubDetail</p>
+            </div>
+  
+            <!-- Fifth -->
+            <img
+              src="./cms/SVG FINAL/Icons 08 to 15 NON HOVER SVG/Icons NonHover-12a.svg"
+              alt="icon-12a"
+              class="fifth-icon-profile"
+            />
+            <div class="icon-hover-modal icon-hover-modal-fifth-icon">
+              <h5>Sub Heading</h5>
+              <h4>
+                <img src="./cms/SVG FINAL/Icons 08 to 15 NON HOVER SVG/Icons NonHover-10a.svg" alt="icon-hovered-box"></img>
+                HEADING</h4>
+              <p>SubDetail</p>
+            </div>
+  
+            <!-- Sixth -->
+  
+            <img
+              src="./cms/SVG FINAL/Icons 08 to 15 NON HOVER SVG/Icons NonHover-13a.svg"
+              alt="icon-13a"
+              class="sixth-icon-profile"
+            />
+            <div class="icon-hover-modal icon-hover-modal-sixth-icon">
+              <h5>Sub Heading</h5>
+              <h4>
+                <img src="./cms/SVG FINAL/Icons 08 to 15 NON HOVER SVG/Icons NonHover-10a.svg" alt="icon-hovered-box"></img>
+                HEADING</h4>
+              <p>SubDetail</p>
+            </div>
+  
+            <!-- Seventh -->
+            <img
+              src="./cms/SVG FINAL/Icons 08 to 15 NON HOVER SVG/Icons NonHover-14a.svg"
+              alt="icon-14a"
+              class="seventh-icon-profile"
+            />
+            <div class="icon-hover-modal icon-hover-modal-seventh-icon">
+              <h5>Sub Heading</h5>
+              <h4>
+                <img src="./cms/SVG FINAL/Icons 08 to 15 NON HOVER SVG/Icons NonHover-10a.svg" alt="icon-hovered-box"></img>
+                HEADING</h4>
+              <p>SubDetail</p>
+            </div>
+  
+            <!-- Eighth -->
+            <img
+              src="./cms/SVG FINAL/Icons 08 to 15 NON HOVER SVG/Icons NonHover-15a.svg"
+              alt="icon-15a"
+              class="eighth-icon-profile"
+            />
+            <div class="icon-hover-modal icon-hover-modal-eighth-icon">
+              <h5>Sub Heading</h5>
+              <h4>
+                <img src="./cms/SVG FINAL/Icons 08 to 15 NON HOVER SVG/Icons NonHover-10a.svg" alt="icon-hovered-box"></img>
+                HEADING</h4>
+              <p>SubDetail</p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="activeProblems-container">
+          <div class="activeProblems" id="activeProblems">
+            <!-- If the total problems are 15, classname array-size-22 will become array-size-15 -->
+            <!-- COntent inside h1 will be dynamic and the class array-size-0 will be dependent on it where 0 is the total number of active problems -->  
+            <div
+              class="problemsButton array-size-8"
+              id="activeProblems-innerButton"
+            >
+              <h1>8</h1>
+            </div>
+          </div>
+        </div>
+        
+        <div class="pastProblems-container">
+          <div class="pastProblems" id="pastProblems">
+            <!-- If the total problems are 15, classname array-size-22 will become array-size-15 -->
+            <!-- Same as that of active problems -->
+            <div
+              class="problemsButton array-size-3"
+              id="pastProblems-innerButton"
+            >
+              <h1>3</h1>
+            </div>
+          </div>
+        </div>
+
+        
+          
+        <div class="medicationsAndAllergies">
+          <div class="medications" id="medications">
+            <!-- If the total problems are 15, classname array-size-22 will become array-size-15 -->
+            <!-- Same as that of active problems -->
+            <div
+              class="problemsButton array-size-7"
+              id="medications-innerButton"
+            >
+              <h1>7</h1>
+            </div>
+          </div>
+
+          
+
+          <div class="allergies" id="allergies">
+            <!-- If the total problems are 15, classname array-size-7 will become array-size-15 -->
+            <!-- Same as that of active problems -->
+            <div class="problemsButton array-size-1" id="allergies-innerButton">
+              <h1>2</h1>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="pastProblemsAndMedicationsModal">
+        <div
+          class="pastProblems-modal no-hover destroyed"
+          id="pastProblems-modal"
+        >
+          <!-- Dynamic Content to be rendered with the following order:
+          <div class="pastProblems-details">
+            <p>{Day/Month/Year}</p>
+            <p>
+              <img
+                src={pastProblemIconSourcePath}
+                alt="icon"
+              />
+              {Past Problem Name}
+            </p>
+          </div>
+        -->
+          <div class="pastProblems-details">
+            <p>DD/MM/YYYY</p>
+            <p>
+              <img
+                src="./cms/SVG FINAL/Points SVG/non-hover-icon-significant.svg"
+                alt="icon"
+              />
+              Past Problem 01
+            </p>
+          </div>
+          <div class="pastProblems-details">
+            <p>DD/MM/YYYY</p>
+            <p>
+              <img
+                src="./cms/SVG FINAL/Points SVG/non-hover-icon-significant.svg"
+                alt="icon"
+              />
+              Past Problem 02
+            </p>
+          </div>
+          <div class="pastProblems-details">
+            <p>DD/MM/YYYY</p>
+            <p>
+              <img
+                src="./cms/SVG FINAL/Points SVG/non-hover-icon-significant.svg"
+                alt="icon"
+              />
+              Past Problem 03
+            </p>
+          </div>
+        </div>
+        <div
+          class="medications-past-problems-modal no-hover destroyed"
+          id="medications-modal-past-problems"
+        >
+          <!-- Same as that shown above of past problems -->
+          <div class="medications-past-problems-details">
+            <p>
+              <img
+                src="./cms/SVG FINAL/Points SVG/non-hover-icon-repeat.svg"
+                alt="icon"
+              />
+              Medication 05
+            </p>
+          </div>
+          <div class="medications-past-problems-details">
+            <p>
+              <img
+                src="./cms/SVG FINAL/Points SVG/non-hover-icon-acute.svg"
+                alt="icon"
+              />
+              Medication 06
+            </p>
+          </div>
+          <div class="medications-past-problems-details">
+            <p>
+              <img
+                src="./cms/SVG FINAL/Points SVG/non-hover-icon-significant.svg"
+                alt="icon"
+              />
+              Medication 07
+            </p>
+          </div>
+        </div>
+      </div>
+    </main>
+  </body>
+  <script src="main.js" ></script>
+  <script src="circleType.js"></script>
+  <script src="http://circletype.labwire.ca/js/plugins.js" ></script>
+</html>

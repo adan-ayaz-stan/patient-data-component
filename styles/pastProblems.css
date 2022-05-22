@@ -1,0 +1,45 @@
+.pastProblems-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 100;
+}
+.pastProblems {
+  position: relative;
+  bottom: -150px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  height: 8em;
+  width: 8em;
+  background-color: white;
+  border: solid 5px black;
+  border-radius: 10em;
+  cursor: pointer;
+  z-index: 100;
+}
+.pastProblems-modal {
+  display: flex;
+  flex-direction: column;
+  min-width: 350px;
+  max-width: 350px;
+
+  font-family: "Avenir BH";
+  transition: all ease 0.3s;
+}
+.pastProblems-details {
+  display: flex;
+  justify-content: space-around;
+}
+.pastProblems-details p {
+  display: flex;
+  align-items: center;
+}
+
+.pastProblems-details img {
+  height: 25px;
+  width: 25px;
+}

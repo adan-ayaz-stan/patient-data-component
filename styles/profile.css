@@ -1,0 +1,280 @@
+.profileSuperContainer {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 200px;
+  height: 200px;
+}
+
+.profileNameBox {
+  position: absolute;
+  top: 35%;
+  left: 0;
+  transition: all ease 0.3s;
+}
+
+.profileNameBoxMinimized {
+  position: static !important;
+  top: 0 !important;
+  left: 0 !important;
+  border-radius: 8px 0px 0px 0px;
+  overflow: hidden;
+  z-index: 0;
+}
+.profileNameBoxMinimized h4 {
+  width: 100vw !important;
+}
+
+.profileNameBox h4 {
+  width: 25vw;
+  background-color: black;
+  padding: 0.3em 1em;
+  font-size: 2em;
+  color: white;
+  text-align: left;
+}
+.profileNameBox p {
+  padding: 0.5em 2em;
+}
+
+.profileContainer {
+  position: relative;
+  right: 200px;
+
+  width: 200px;
+  height: 200px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.profileContainer img:hover {
+  filter: invert(1);
+}
+.profile-gender-type {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 160px;
+  width: 160px;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.profileImage {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  height: 8em;
+  width: 8em;
+  overflow: hidden;
+  background-color: #fff;
+  border-radius: 10em;
+  font-family: "Avenir BH";
+  z-index: 1;
+}
+.profileImage:hover > img {
+  filter: blur(0px);
+  z-index: 5;
+}
+
+.profileImage img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 150px;
+  width: 150px;
+  border-radius: 10em;
+  object-fit: contain;
+
+  transition: all ease 0.3s;
+
+  filter: blur(4px);
+  z-index: -1;
+}
+.profileImage h3 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  z-index: 1;
+}
+
+.first-icon-profile {
+  position: absolute;
+  top: 15%;
+  left: 30%;
+  width: 25px;
+  height: 25px;
+  cursor: pointer;
+  z-index: 10;
+}
+.icon-hover-modal-first-icon {
+  visibility: hidden;
+  opacity: 0;
+}
+.first-icon-profile:hover + .icon-hover-modal-first-icon {
+  visibility: visible;
+  opacity: 1;
+}
+.second-icon-profile {
+  position: absolute;
+  top: 25%;
+  left: 16%;
+  width: 25px;
+  height: 25px;
+  cursor: pointer;
+  z-index: 10;
+}
+.icon-hover-modal-second-icon {
+  visibility: hidden;
+  opacity: 0;
+}
+.second-icon-profile:hover + .icon-hover-modal-second-icon {
+  visibility: visible;
+  opacity: 1;
+}
+.third-icon-profile {
+  position: absolute;
+  top: 42%;
+  left: 12%;
+  width: 25px;
+  height: 25px;
+  cursor: pointer;
+  z-index: 10;
+}
+.icon-hover-modal-third-icon {
+  visibility: hidden;
+  opacity: 0;
+}
+.third-icon-profile:hover + .icon-hover-modal-third-icon {
+  visibility: visible;
+  opacity: 1;
+}
+.fourth-icon-profile {
+  position: absolute;
+  top: 59%;
+  left: 16%;
+  width: 25px;
+  height: 25px;
+  cursor: pointer;
+  z-index: 10;
+}
+.icon-hover-modal-fourth-icon {
+  visibility: hidden;
+  opacity: 0;
+}
+.fourth-icon-profile:hover + .icon-hover-modal-fourth-icon {
+  visibility: visible;
+  opacity: 1;
+}
+.fifth-icon-profile {
+  position: absolute;
+  top: 71%;
+  left: 29%;
+  width: 25px;
+  height: 25px;
+  cursor: pointer;
+  z-index: 10;
+}
+.icon-hover-modal-fifth-icon {
+  visibility: hidden;
+  opacity: 0;
+}
+.fifth-icon-profile:hover + .icon-hover-modal-fifth-icon {
+  visibility: visible;
+  opacity: 1;
+}
+.sixth-icon-profile {
+  position: absolute;
+  top: 30%;
+  right: 14%;
+  width: 25px;
+  height: 25px;
+  background-color: white;
+  border-radius: 10em;
+  cursor: pointer;
+  z-index: 10;
+}
+.icon-hover-modal-sixth-icon {
+  visibility: hidden;
+  opacity: 0;
+}
+.sixth-icon-profile:hover + .icon-hover-modal-sixth-icon {
+  visibility: visible;
+  opacity: 1;
+}
+.seventh-icon-profile {
+  position: absolute;
+  top: 45%;
+  right: 12%;
+  width: 25px;
+  height: 25px;
+  background-color: white;
+  border-radius: 10em;
+  cursor: pointer;
+  z-index: 10;
+}
+.icon-hover-modal-seventh-icon {
+  visibility: hidden;
+  opacity: 0;
+}
+.seventh-icon-profile:hover + .icon-hover-modal-seventh-icon {
+  visibility: visible;
+  opacity: 1;
+}
+.eighth-icon-profile {
+  position: absolute;
+  top: 60%;
+  right: 16%;
+  width: 25px;
+  height: 25px;
+  background-color: #fff;
+  border-radius: 10em;
+  cursor: pointer;
+  z-index: 10;
+}
+.icon-hover-modal-eighth-icon {
+  visibility: hidden;
+  opacity: 0;
+}
+.eighth-icon-profile:hover + .icon-hover-modal-eighth-icon {
+  visibility: visible;
+  opacity: 1;
+}
+
+.icon-hover-modal {
+  position: absolute;
+  top: 10%;
+  left: -90%;
+  height: 4em;
+  width: 12em;
+  border: solid 2px black;
+  transition: all ease 0.3s;
+}
+.icon-hover-modal h4,
+.icon-hover-modal p,
+.icon-hover-modal h5 {
+  padding: 3px 2px;
+}
+.icon-hover-modal h4 {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  background-color: black;
+  color: white;
+}
+.icon-hover-modal p {
+  font-size: 0.7em;
+}
+.icon-hover-modal img {
+  height: 20px;
+  width: 20px;
+}

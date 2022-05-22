@@ -1,0 +1,24 @@
+.medications-past-problems-modal {
+  position: relative;
+  left: 77px;
+  display: flex;
+  flex-direction: column;
+  font-family: "Avenir BH";
+  transition: all ease 0.3s;
+}
+.medications-past-problems-details {
+  margin-right: auto;
+  width: fit-content;
+  display: flex;
+  flex-direction: row;
+  justify-content: left;
+  align-items: center;
+}
+.medications-past-problems-details p {
+  display: flex;
+  align-items: center;
+}
+.medications-past-problems-details img {
+  height: 25px;
+  width: 25px;
+}
